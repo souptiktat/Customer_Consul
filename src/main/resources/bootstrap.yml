@@ -1,0 +1,19 @@
+server: 
+  port: 9200
+  
+spring:
+  application:
+    name: CustomerMS
+  cloud:
+    consul:
+      discovery: 
+        hostname: localhost
+      config:
+        enabled: true
+        prefix: config
+        default-context: application
+        data-key: data
+        profile-separator: '::'
+        format: YAML  
+        watch:
+          delay: 100
